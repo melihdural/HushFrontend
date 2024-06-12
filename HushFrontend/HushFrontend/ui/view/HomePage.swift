@@ -9,10 +9,28 @@ import SwiftUI
 
 struct HomePage: View {
     @ObservedObject var viewModel = HomePageViewModel()
+    @State private var scale: CGFloat = 1.7
+    @State private var isIncreasing: Bool = false
     
     var body: some View {
-        VStack {
-            Text("Hello, World!")
+        NavigationView {
+            NavigationLink(destination: Login()){
+                ZStack{
+                    Color.blue.ignoresSafeArea();
+                    VStack {
+                        Text("Hello, Home Page!")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding()
+                            .cornerRadius(10)
+                            .padding()
+                            .foregroundColor(.white)
+                        Text("Go to Login")
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                }
+            }
         }
     }
 }
