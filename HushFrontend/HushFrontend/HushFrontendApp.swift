@@ -11,7 +11,7 @@ import SwiftUI
 struct HushFrontendApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
         }
     }
 }
